@@ -1,0 +1,26 @@
+.container {
+    display: flex;
+    /* dá a possibilidade de organizar em uma linha ou coluna*/
+    align-items: center;
+    /* centralizar no eixo vertical */
+    background-color: #f2f2f2;
+    /* cor do Fundo*/
+    height: 46px;
+    /* determina a altura*/
+    width: 100%;
+    /* largura de 100%*/
+    border: 0;
+    /* elimina a borda*/
+    margin: 8px 0;
+    /* espaço fora do elemento vertival/horizontal*/
+    border-radius: 8px;
+    /* Bordas arredondadas*/
+    color: #565577;
+    /* cor do texto*/
+    font-size: 14px;
+    /*tamanho da letra*/
+    padding: 0 20px;
+    /* espaço dentro do elemento vertival/horizontal*/
+    cursor: pointer;
+    /* ponteiro do mouse vira uma mão*/
+}
