@@ -1,0 +1,18 @@
+.container {
+    background-color: #128cfe;
+    /*Cor do fundo*/
+    border-radius: 8px;
+    /*arredonda as pontas*/
+    border: 0;
+    /*retira a borda padrão*/
+    height: 46px;
+    /*define a altura*/
+    color: #fff;
+    /*cor do texto*/
+    font-size: 14px;
+    /*Tamanho da letra*/
+    padding: 0 20px;
+    /* espaço dentro do elemento vertical/horizontal*/
+    cursor: pointer;
+    /* ponteiro do mouse vira uma mão*/
+}
