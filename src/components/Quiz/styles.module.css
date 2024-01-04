@@ -1,0 +1,101 @@
+.container {
+    display: flex;
+    /* dá a possibilidade de organizar em uma linha ou coluna*/
+    justify-content: center;
+    /* centralizar no eixo horizontal*/
+    align-items: center;
+    /* centralizar no eixo vertical */
+    height: 100%;
+    /* pega a altura toda da tela*/
+}
+
+.card {
+    display: flex;
+    /* dá a possibilidade de organizar em uma linha ou coluna*/
+    background-color: #fff;
+    /* cor do Fundo*/
+    border-radius: 16px;
+    /* Bordas arredondadas*/
+    max-width: 1000px;
+    /* ocupação máxima determinada, assim não pega a tela toda*/
+    width: 100%;
+    /* ele ocupa os 100% dos 1000px*/
+    margin: 20px;
+    /* espaço fora do elemento*/
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    /*Aplica uma sombra*/
+}
+
+.quiz {
+    display: flex;
+    /* dá a possibilidade de organizar em uma linha ou coluna*/
+    flex-direction: column;
+    /* os itens ficam em coluna, um embaixo do outro*/
+    justify-content: center;
+    /* centralizar no eixo horizontal*/
+    align-items: center;
+    /* centralizar no eixo vertical */
+    width: 100%;
+    /*ocupa 100% da largura*/
+    height: 100%;
+    /*ocupa 100% da altura*/
+    padding: 20px 20px 80px;
+    /* espaço dentro do elemento*/
+}
+
+.quizHeader {
+    display: flex;
+    /* dá a possibilidade de organizar em uma linha ou coluna*/
+    flex-direction: column;
+    /* os itens ficam em coluna, um embaixo do outro*/
+    align-items: center;
+    /* centralizar no eixo vertical */
+    margin-top: 80px;
+    /* espaço fora do elemento no topo*/
+}
+
+.questionCount {
+    font-weight: bold;
+    /*negrito*/
+    font-size: 12px;
+    /*tamanho da letra*/
+    color: #ffc83a;
+    /*cor da letra*/
+    letter-spacing: 2px;
+    /*espaço entre as letras*/
+}
+
+.question {
+    color: #000b39;
+    /*cor da letra*/
+    font-size: 24px;
+    /*tamanho da letra*/
+    font-weight: bold;
+    /*negrito*/
+    margin-top: 8px;
+    /* espaço fora do elemento no topo*/
+}
+
+.answers {
+    margin-top: 40px;
+    /* espaço fora do elemento no topo*/
+    max-width: 600px;
+    /* ocupação máxima determinada, assim não pega a tela toda*/
+    width: 100%;
+    /* ele ocupa os 100% dos 600px*/
+}
+
+.answerItem {
+    list-style: none;
+    /*Retira o pontinho da lista*/
+}
+
+.correct {
+    border: 3px solid #4caf50;
+    background-color: #e8f6e9;
+}
+
+.incorrect {
+    border: 3px solid #ff1744;
+    background-color: #ffebee;
+}
