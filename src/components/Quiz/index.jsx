@@ -3,6 +3,7 @@ import {QuestionAnswer} from '../QuestionAnswer'
 import S from './styles.module.css'
 import { Button } from '../Button'
 import {Result} from '../Result'
+import {ProgressBar} from '../ProgressBar'
 
 const QUESTIONS = [
     {
@@ -37,6 +38,7 @@ export function Quiz () {
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
     const [isCurrentQuestionAnswered, setIsCurrentQuestionAnswered] = useState(false)
     const [isTakingQuiz, setIsTakingQuiz] = useState(true)
+    const currentQuestionNumber = currentQuestionIndex + 1
     const quizSize = QUESTIONS.length
 
     const handleAnswerQuestion = (event, question, answer) => {
@@ -70,13 +72,14 @@ export function Quiz () {
     }
 
     const currentQuestion = QUESTIONS[currentQuestionIndex]
-    const navigationButtonText = currentQuestionIndex + 1 === quizSize ? 'Ver Resultado' : 'Próxima Pergunta'
+    const navigationButtonText = currentQuestionNumber === quizSize ? 'Ver Resultado' : 'Próxima Pergunta'
     return (
         <div className={S.container}>
           <div className={S.card}>
             {isTakingQuiz ? (<div className={S.quiz}>
+          <ProgressBar size={quizSize} currentStep={currentQuestionNumber} />
                 <header className={S.quizHeader}>
-                    <span className={S.questionCount}>PERGUNTA 1/3</span>
+                    <span className={S.questionCount}>PERGUNTA {currentQuestionNumber}/{quizSize}</span>
                         <p className={S.question}>{currentQuestion.question}</p>
 
                 </header>
