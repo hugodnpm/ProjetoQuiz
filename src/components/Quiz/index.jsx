@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import {QuestionAnswer} from '../QuestionAnswer'
 import S from './styles.module.css'
+import { Button } from '../Button'
 
 const QUESTIONS = [
     {
@@ -23,7 +24,7 @@ const QUESTIONS = [
     },
     {
         id: 4,
-        question: 'Torço para qual time?',
+        question: 'Qual o meu time?',
         answers: ['Vasco da Gama', 'Sport Club', 'Botafogo', 'Grêmio'],
         correctAnswer:'Vasco da Gama'
     },
@@ -31,8 +32,8 @@ const QUESTIONS = [
 
 
 export function Quiz () {
-    const currentQuestion = QUESTIONS[0]
     const [correctAnswerCout, setCorrectAnswerCout] = useState(0)
+    const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
     const [isCurrentQuestionAnswered, setIsCurrentQuestionAnswered] = useState(false)
 
     const handleAnswerQuestion = (event, question, answer) => {
@@ -48,6 +49,14 @@ export function Quiz () {
         }
         setIsCurrentQuestionAnswered(true)
     }
+
+    const currentQuestion = QUESTIONS[currentQuestionIndex]
+const handleNextQuestion = () => {
+    if (currentQuestionIndex + 1 < QUESTIONS.length){
+        setCurrentQuestionIndex(index => index+1)
+    }
+    setIsCurrentQuestionAnswered(false)
+}
     return (
         <div className={S.container}>
           <div className={S.card}>
@@ -67,9 +76,11 @@ export function Quiz () {
                     />
                     </li>
                 ))}
-
-
                 </ul>
+                {isCurrentQuestionAnswered && (
+                <Button onClick={handleNextQuestion} >Próxima Pergunta</Button>
+
+                )}
             </div>
           </div>
         </div>

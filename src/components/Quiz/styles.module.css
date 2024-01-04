@@ -79,6 +79,8 @@
 .answers {
     margin-top: 40px;
     /* espaço fora do elemento no topo*/
+    margin-bottom: 40px;
+    /* espaço fora do elemento no fundo*/
     max-width: 600px;
     /* ocupação máxima determinada, assim não pega a tela toda*/
     width: 100%;
