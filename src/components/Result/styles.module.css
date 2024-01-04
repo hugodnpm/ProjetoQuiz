@@ -1,0 +1,31 @@
+.container {
+    display: flex;
+    /* dá a possibilidade de organizar em uma linha ou coluna*/
+    justify-content: center;
+    /* centralizar no eixo horizontal*/
+    align-items: center;
+    /* centralizar no eixo vertical*/
+    flex-direction: column;
+    /*coloca um embaixo do outro*/
+    height: 100%;
+    /* altura de 100%*/
+    width: 100%;
+    /* largura de 100%*/
+    padding: 20px;
+    /* espaço dentro do elemento todos os lados*/
+}
+
+.title {
+    margin-bottom: 24px;
+    /* espaço fora do elemento no fundo*/
+    color: #000b39;
+    /*cor do texto*/
+
+}
+
+.subtitle {
+    margin-bottom: 40px;
+    /* espaço fora do elemento no fundo*/
+    color: #000b39;
+    /*cor do texto*/
+}
